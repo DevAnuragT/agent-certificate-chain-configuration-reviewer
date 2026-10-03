@@ -1,0 +1,54 @@
+{
+  "name": "review-certificate-chain-configuration-reviewer",
+  "description": "Run Certificate Chain Configuration Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "chain_certificates": {
+            "type": "array",
+            "description": "chain certificates"
+          },
+          "service_hostname": {
+            "type": "string",
+            "description": "service hostname"
+          },
+          "renewal_owner": {
+            "type": "string",
+            "description": "renewal owner"
+          }
+        },
+        "required": [
+          "chain_certificates",
+          "service_hostname",
+          "renewal_owner"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-certificate-chain-configuration-reviewer.py",
+    "runtime": "python3"
+  }
+}

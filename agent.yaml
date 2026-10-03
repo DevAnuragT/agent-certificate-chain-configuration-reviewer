@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: certificate-chain-configuration-reviewer
+version: 0.1.0
+description: Check TLS certificate chain and renewal evidence for completeness.
+skills:
+  - certificate-chain-configuration-reviewer-skill
+tools:
+  - review-certificate-chain-configuration-reviewer
+tags:
+  - cybersecurity
+  - evidence-driven

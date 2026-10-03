@@ -1,0 +1,24 @@
+{
+  "slug": "certificate-chain-configuration-reviewer",
+  "title": "Certificate Chain Configuration Reviewer",
+  "category": "cybersecurity",
+  "description": "Check TLS certificate chain and renewal evidence for completeness.",
+  "fields": {
+    "chain_certificates": {
+      "label": "chain certificates",
+      "kind": "list",
+      "minimum": 2
+    },
+    "service_hostname": {
+      "label": "service hostname",
+      "kind": "required",
+      "minimum": 0
+    },
+    "renewal_owner": {
+      "label": "renewal owner",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

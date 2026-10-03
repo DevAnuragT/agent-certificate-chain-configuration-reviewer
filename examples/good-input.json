@@ -1,0 +1,8 @@
+{
+  "chain_certificates": [
+    "record-1",
+    "record-2"
+  ],
+  "service_hostname": "evidence-record",
+  "renewal_owner": "evidence-record"
+}
